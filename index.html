@@ -7,29 +7,34 @@
     <link rel="icon" href="favicon.svg" type="image/svg+xml"> 
     <style> 
     body { 
-        font-family: Arial; 
-        font-weight: 100; 
-        font-style: normal; 
+        font-family: Arial;
+        font-weight: 100;
+        font-style: normal;
         line-height: 1.5;
-        font-size: 1.5rem; 
-        margin: 0; 
-        padding: 0; 
-        box-sizing: border-box; 
-        display: flex; 
-        flex-direction: column; 
-        align-items: center; 
-        height: 100%; 
-        background-image: url('background.png'); 
-        background-repeat: no-repeat; 
-        background-size: cover; 
-        
+        font-size: 1.5rem;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        background-image: url('background.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        overscroll-behavior: none;
+
+        /* overflow: hidden; */
     } 
     .content-container { 
         width: 100%; 
         margin-top: 180px;   
         background-color: rgba(255, 255, 255, 0.8); 
         border-radius: 10px; 
-        overflow-y: auto;
+        overflow-y: hidden;
+        padding: 0px;
+        overflow: hidden; 
     } 
     .black-banner { 
         background-color: black; 
@@ -89,8 +94,8 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0 20px;
         height: 100%;
+        width: 100%;
     }
     @media screen and (max-width: 480px) { 
         .qr-image { 
@@ -115,8 +120,8 @@
     } 
 	
 	.info-container-embed {
-        
-        width: 100%;
+        width: 50em;
+        flex: 1;
     }
     
     </style> 
@@ -140,8 +145,7 @@
                     header="AI-apuri"     
                     agentname="AI-apuri"
                     primary="rgba(42, 255, 0, 1)"  
-                    responsewaitmessage="Mietin…"   
-                    width="600"   
+                    responsewaitmessage="Mietin…"      
                     text="#000"       
                     error="#ff0000"
                     greeting="Olen demochatbot Sote ATK -päiviä varten. Tehtäväni on vastailla kysymyksiin aivosairauksista. Tiedot perustuvat HUS:n Terveyskylä -verkkosivuston sisältöön."
@@ -149,8 +153,9 @@
                     errormessage="Valitettavasti en löytänyt vastausta kysymykseen."
                     textinputplaceholder="Kysy mitä tahansa..."
                     openwindowtext="AI-apuri Chat"
-                    maxh="30em"   
-                    fontfamily="Arial"        
+                    maxh="60em"   
+                    fontfamily="Arial" 
+                    multilineinput="true"       
                 /> 
             </div>
             <div class="qr-image"> 
@@ -159,4 +164,4 @@
         </div> 
     </div> 
 </body> 
-</html> 
+</html>
